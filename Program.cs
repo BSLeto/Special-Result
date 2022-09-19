@@ -1,5 +1,5 @@
 ﻿Console.Clear();
-string[] start_array = new string[8] { "red", "blue", "world", "player", "settings", "qwe", "yas", "mod" };
+string[] start_array = new string[8] { "red", "bl", "world", "player", "settings", "qwe", "yas", "mod" };
 string[] final_array = new string[start_array.Length];
 int count = 0;
 for (int i = 0; i < start_array.Length; i++)
