@@ -1,14 +1,23 @@
 ﻿Console.Clear();
-string[] start_array = new string[8] { "red", "bl", "world", "player", "settings", "qwe", "yas", "mod" };
-string[] final_array = new string[start_array.Length];
-int count = 0;
-for (int i = 0; i < start_array.Length; i++)
+string[] startArray = new string[8] { "red", "bl", "world", "player", "settings", "qwe", "yas", "mod" };
+string[] finalArray = new string[startArray.Length];
+
+void NewArray(string[] firstArray, string[] secondArray)
 {
-    if (start_array[i].Length <= 3)
+    int count = 0;
+    for (int i = 0; i < firstArray.Length; i++)
     {
-        final_array[count] = start_array[i];
-        count++;
+        if (firstArray[i].Length <= 3)
+        {
+            secondArray[count] = firstArray[i];
+            count++;
+        }
     }
 }
-Console.WriteLine($"Start Array: {String.Join(" ", start_array)}");
-Console.WriteLine($"Final Array: {String.Join(" ", final_array)}");
+
+void PrintArray(string[] array){
+    Console.WriteLine($"Array : {String.Join(" ", array)}");
+}
+NewArray(startArray,finalArray);
+PrintArray(startArray);
+PrintArray(finalArray);
